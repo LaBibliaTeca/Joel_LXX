@@ -33,8 +33,7 @@
 	</style>
 </head>
 <body>
-	 	    	<button style="width: 200px; height: 50px;background-color: rgb(255, 221, 3);font-size: 16px;" onclick="leerEnVozAlta()">Presionar para Leer en Voz Alta</button>
-<div class="contenido">
+	 	    	<div class="contenido">
 	<!--<img src="varonymujer.jpeg" class="imagen1"/><br>
 	  <span style="background-color:#FFFF00; font-size:14px;"> Gen1:27 Según la <br>Biblia creó dos <br>,el otro <br>,era un extraño...</span><br />
         </b></i></p>
@@ -169,33 +168,7 @@ Joel 1.
  
     </div>
 	<a href="https://labibliateca.github.io/main/"><mark>PAGINA PRINCIPAL</mark>
-	<script>
-     function leerEnVozAlta() {
-    // Obtener el texto del elemento con la clase "contenido-texto"
-    var texto = document.querySelector('.contenido').innerText;
-
-    // Dividir el texto en segmentos más pequeños
-    var partes = dividirTextoEnPartes(texto, 560); // Por ejemplo, 200 caracteres por parte
-
-    // Leer cada parte secuencialmente
-    partes.forEach((parte) => {
-        var mensaje = new SpeechSynthesisUtterance(parte);
-        mensaje.lang = 'es-ES';
-        mensaje.pitch = 1;
-        mensaje.rate = 1;
-        window.speechSynthesis.speak(mensaje);
-    });
-}
-
-function dividirTextoEnPartes(texto, tamano) {
-    var partes = [];
-    for (var i = 0; i < texto.length; i += tamano) {
-        partes.push(texto.slice(i, i + tamano));
-    }
-    return partes;
-}
-
-    </script>
+	
 </body>
     
     </html>
